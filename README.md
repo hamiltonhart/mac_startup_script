@@ -7,6 +7,7 @@ This script will do the following:
    - If not installed, it will be installed
    - If it is installed, homebrew will update
 2. Install all the Required Formulae and Casks listed below
+3. Installs all fonts in the Fonts folder
 
 ### Required Formulae
     brotli  
