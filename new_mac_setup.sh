@@ -1,4 +1,6 @@
-# Run as root
+#! /bin/bash
+
+# Do not run as root. Homebrew will prevent installations
 
 # Gather variables
 required_formulae=$(cat Installs/required_formulae.txt)
@@ -19,9 +21,6 @@ brew install -y $required_formulae && printf "Required Formulae Installed.\n"
 
 # Installs required Casks in info.txt
 brew install --cask $required_casks && printf "Required Casks Installed"
-
-# Install fonts
-cp Fonts/*.ttf /Library/Fonts/ && printf "Fonts Installed"
 
 # Copy Preference Files
 cp Config/.zshrc ~/ && printf "ZSH config copied"
