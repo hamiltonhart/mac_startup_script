@@ -28,4 +28,4 @@ brew install --cask $required_casks && printf "Required Casks Installed"
 
 # Copy Preference Files
 cp Config/.zshrc ~/ && printf "ZSH config copied"
-cp Config/.cobalt2.zsh-theme ~/.oh-my-zsh/themes/
+cp Config/cobalt2.zsh-theme ~/.oh-my-zsh/themes/
