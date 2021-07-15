@@ -1,0 +1,15 @@
+brave-browser  
+ilok-license-manager  
+loopback  
+logitech-camera-settings  
+microsoft-auto-update  
+microsoft-excel  
+microsoft-outlook  
+microsoft-powerpoint  
+microsoft-teams  
+microsoft-word  
+reaper  
+slack  
+skype  
+streamlabs-obs  
+zoom

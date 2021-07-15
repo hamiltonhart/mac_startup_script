@@ -1,0 +1,12 @@
+carbon-copy-cloner
+enpass
+figma
+firefox
+firefox-developer-edition
+gimp
+google-chrome
+google-chrome-dev
+iina
+imageoptim
+virtualbox
+visual-studio-code

@@ -1,13 +1,27 @@
 # Run as root
 
+# Gather variables
+required_formulae=$(cat Installs/required_formulae.txt)
+required_casks=$(cat Installs/required_casks.txt)
+optional_formulae=$(cat Installs/optional_formulae.txt)
+optional_casks=$(cat Installs/optional_casks.txt)
+
+homebrew_install="$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 # Installs XCode
-xcode-select --install
+xcode-select --install && printf "XCode has been installed.\n"
 
 # Installs/Updates Homebrew
-brew update || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew update || /bin/bash -c $homebrew_install && printf "Homebrew is ready.\n"
 
 # Installs all Formulae in info.txt
-brew install -y brotli c-ares gdbm gettext git icu4c jemalloc libev libidn2 libunistring libuv mpdecimal ncurses nghttp2 node openssl@1.1 pcre pcre2 pipenv python@3.9 readline sqlite wget xz zsh zsh-autosuggestions zsh-syntax-highlighting alfred
+brew install -y $required_formulae && printf "Required Formulae Installed.\n"
 
 # Installs required Casks in info.txt
-brew install --cask carbon-copy-cloner enpass figma firefox firefox-developer-edition gimp google-chrome google-chrome-dev iina imageoptim virtualbox visual-studio-code
+brew install --cask $required_casks && printf "Required Casks Installed"
+
+# Install fonts
+cp Fonts/*.ttf /Library/Fonts/ && printf "Fonts Installed"
+
+# Copy Preference Files
+cp Config/.zshrc ~/ && printf "ZSH config copied"
