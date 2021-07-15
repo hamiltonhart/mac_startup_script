@@ -1,23 +1,21 @@
 # Get Me Up And Running
 
-These two scripts and README files are meant to serve as a way to quickly get up and running with the programs I need.
-As much as can be installed with Homebrew or via CLI is and the rest is documented here for manual installation.
+These two scripts and README files are meant to serve as a way to quickly get up and running with the programs I need.  
+As much as can be installed with Homebrew or via CLI is and the rest is documented here for manual installation.  
 
 ## Prep
-**Installs**: Installs are listed below but are also included in the Installs directory. Adjust what is in the corresponding Install files to change what is installed. Only the required installs are part of the script.
+**Installs**: Installs are listed below but are also included in the Installs directory. Adjust what is in the corresponding Install files to change what is installed. Only the required installs are part of the script.  
 **Config Files**: As these are moved to specific places, only the config files present will work. They can be updated as needed.
-**Fonts**: Fonts require a separate script to be run as it must be run as root but Homebrew freaks out with root. Any .ttf files in the Fonts folder are copied.
 
-**new_mac_setup.sh**
+**new_mac_setup.sh**  
 This script will do the following:
-1. Check if Homebrew is installed
+1. Installs XCode
+2. Check if Homebrew is installed
    - If not installed, it will be installed
    - If it is installed, homebrew will update
-2. Install all the Required Formulae and Casks listed below
-3. Copies config files
+3. Install all the Required Formulae and Casks listed below
+4. Copies config files
 
-**add_fonts.sh**
-1. Copies all .ttf files in the Fonts folder to the appropriate location
 
 ### Required Formulae
     brotli  
@@ -33,6 +31,7 @@ This script will do the following:
     libuv  
     mpdecimal  
     ncurses  
+    neofetch  
     nghttp2  
     node  
     openssl@1.1  
@@ -44,26 +43,30 @@ This script will do the following:
     sqlite  
     wget  
     xz  
+    yarn  
     zsh  
     zsh-autosuggestions  
     zsh-syntax-highlighting  
-    alfred  
 
 ### Required Casks
+    alfred  
     carbon-copy-cloner  
     enpass  
     figma  
     firefox  
     firefox-developer-edition  
+    font-fira-code  
     gimp  
     google-chrome  
     google-chrome-dev  
+    insomnia  
+    iterm2  
     iina  
     imageoptim  
-    virtualbox  
     visual-studio-code  
 
 ### Optional Casks
+    balenaetcher  
     brave-browser  
     ilok-license-manager  
     loopback  
@@ -78,6 +81,7 @@ This script will do the following:
     slack  
     skype  
     streamlabs-obs  
+    virtualbox  
     zoom  
 
 ### Non-Homebrew Installs
